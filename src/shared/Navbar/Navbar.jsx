@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../public/logo-no-background.png';
+import logo from '../../../public/logo-no-background.png';
 
 const Navbar = () => {
   return (
