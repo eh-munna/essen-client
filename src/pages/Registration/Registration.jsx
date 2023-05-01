@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Registration = () => {
+  const { user } = useContext(AuthContext);
+  console.log(user);
   return (
     <div className="w-3/4 mx-auto py-3 md:py-10">
       <h2 className="my-4 text-center text-[#398378] text-2xl">
         Please Sign Up
       </h2>
-      <form className="w-1/2 mx-auto">
+      <form className="w-full md:w-1/2 mx-auto">
         <label htmlFor="email" className="block text-[#8ABE53] mt-4">
           Name
         </label>

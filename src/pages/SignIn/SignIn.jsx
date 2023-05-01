@@ -7,7 +7,7 @@ const SignIn = () => {
       <h2 className="my-4 text-center text-[#398378] text-2xl">
         Please Sign In
       </h2>
-      <form className="w-1/2 mx-auto">
+      <form className="w-full md:w-1/2 mx-auto">
         <label htmlFor="email" className="block text-[#8ABE53] mt-4">
           Email
         </label>
