@@ -24,15 +24,15 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/register">
+          <Link to="/registration">
             <button className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50">
               Sign Up
             </button>
           </Link>
         </li>
         <li>
-          <Link to="/login" className="">
-            <button className="border px-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
+          <Link to="/sign-in" className="">
+            <button className="border p-[1px] border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
               Sign In
             </button>
           </Link>
