@@ -9,8 +9,12 @@ const Banner = () => {
           <span className="text-[#398378]">Welcome</span> <br /> to our kitchen
         </h1>
 
-        <p className="my-2 md:my-6">Choose your food from our best chefs.</p>
-        <p>We provide best service as much as we can.</p>
+        <p className="my-2 md:my-6 font-semibold">
+          Choose your food from our best chefs.
+        </p>
+        <p className="font-semibold">
+          We provide best service as much as we can.
+        </p>
 
         <button
           type="submit"
