@@ -32,7 +32,7 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/sign-in" className="">
-            <button className="border p-[1px] border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
+            <button className="border py-[1px] px-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
               Sign In
             </button>
           </Link>
