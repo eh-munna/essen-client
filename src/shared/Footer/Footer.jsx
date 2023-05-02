@@ -9,13 +9,23 @@ import {
 
 const Footer = () => {
   return (
-    <div>
-      <div className="grid grid-cols-2 items-center justify-center">
+    <div className="my-8 md:my-20">
+      <div className="grid grid-cols-3 items-center justify-center">
         <div>
-          <h4 className="font-medium text-[#398378] text-center my-2">
+          <h4 className="font-medium text-[#398378] text-lg my-2">
+            We're located at
+          </h4>
+          <ul className="">
+            <li className="text-[#8abe53] text-lg">Demostraße 23</li>
+            <li className="text-[#8abe53] text-lg">12345 Berlin</li>
+            <li className="text-[#8abe53] text-lg">Germany</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-medium text-[#398378] text-center my-2 text-lg">
             Follow Us
           </h4>
-          <ul className="flex gap-3 justify-center items-center">
+          <ul className="flex gap-3 justify-center">
             <li className="text-[#8abe53] text-xl">
               <Link>
                 <FaFacebookF />
@@ -39,7 +49,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="font-medium text-[#398378] text-center my-2">
+          <h4 className="font-medium text-[#398378] text-center my-2 text-lg">
             Useful Links
           </h4>
           <ul className="flex flex-col justify-center items-center gap-3">

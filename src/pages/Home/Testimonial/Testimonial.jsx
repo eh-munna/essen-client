@@ -3,7 +3,7 @@ import React from 'react';
 const Testimonial = () => {
   return (
     <div>
-      <h2 className="my-6 md:my-9 text-center text-4xl text-[#398378] capitalize">
+      <h2 className="my-8 md:my-20 text-center text-4xl text-[#398378] capitalize">
         Our clients say
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 relative">
