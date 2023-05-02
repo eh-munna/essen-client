@@ -19,11 +19,6 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/" className="text-lg font-medium text-[#8abe53]">
-            Recipes
-          </Link>
-        </li>
-        <li>
           <Link to="/registration">
             <button className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50">
               Sign Up
