@@ -9,7 +9,7 @@ const ChefCards = ({ singleChef }) => {
     <div>
       <div className="rounded-md border-rose-500 bg-lime-50 shadow-xl">
         <img
-          className="object-cover h-auto md:h-48 object-center w-full rounded-md mx-auto"
+          className="object-cover h-auto md:h-64 object-center  w-full rounded-md mx-auto"
           src={picture}
           alt=""
         />

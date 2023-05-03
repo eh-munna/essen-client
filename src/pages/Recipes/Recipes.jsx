@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import RecipeCards from './RecipeCards/RecipeCards';
 
 const Recipes = () => {
   // const { id } = useParams();
   const chefs = useLoaderData();
-  const { id, name, years_experience, num_recipes, likes } = chefs;
-  console.log(chefs);
+  const { id, name, years_experience, num_recipes, likes, recipes, bio } =
+    chefs;
+  // console.log(chefs);
 
   return (
     <div className="mt-12">
-      <div className="hero bg-lime-50">
+      <div className="rounded-md hero bg-lime-50">
         <div className="hero-content flex-col md:flex-row">
           <img
             src="https://img.freepik.com/fotos-kostenlos/portraet-des-laechelnden-kochs-in-der-uniform_329181-675.jpg?size=626&ext=jpg"
-            className="max-w-full rounded-lg shadow-2xl"
+            className="max-w-full rounded-lg "
           />
           <div>
             <div className="p-6 space-y-2">
               <h3 className="text-sky-900 text-4xl font-semibold">{name}</h3>
+              <h5 className="text-sky-950 font-medium py-3">{bio}</h5>
               <h3 className="text-sky-500 text-lg font-medium">
-                {years_experience} years of experience
+                {name} has {years_experience} years of experience
               </h3>
               <div className=" flex justify-between items-center">
                 <h4 className="text-slate-600 font-medium">
@@ -34,17 +37,26 @@ const Recipes = () => {
                   <h4 className="text-slate-600 font-medium">{likes}</h4>
                 </div>
               </div>
-              <div className="pt-6">
+              {/* <div className="pt-6">
                 <button
                   type="submit"
                   className="border px-2 py-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
                 >
                   <Link to={`/recipes/${id}`}>View Recipes</Link>
                 </button>
-              </div>
+              </div> */}
             </div>
-            <button className="btn btn-primary">Get Started</button>
           </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="my-8 md:my-20 text-center text-4xl text-[#398378] capitalize">
+          Popular recipes
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {recipes.map((recipe) => (
+            <RecipeCards key={recipe.recipes_id} recipe={recipe}></RecipeCards>
+          ))}
         </div>
       </div>
     </div>
