@@ -7,7 +7,7 @@ const Feedback = () => {
         Give Us Your feedback
       </h2>
 
-      <form className="space-y-5 mx-auto w-1/2 flex flex-col justify-center ">
+      <form className="space-y-5 mx-auto md:w-1/2 flex flex-col justify-center ">
         <div>
           <input
             type="text"

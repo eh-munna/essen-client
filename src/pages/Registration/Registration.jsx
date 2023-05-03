@@ -38,7 +38,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto py-3 md:py-10">
+    <div className="w-full md:w-3/4 mx-auto py-3 md:py-10">
       <h2 className="my-4 text-center text-[#398378] text-2xl">
         Please Sign Up
       </h2>

@@ -9,9 +9,9 @@ import {
 
 const Footer = () => {
   return (
-    <div className="my-8 md:my-20">
-      <div className="grid grid-cols-3 items-center justify-center">
-        <div>
+    <div className="my-4 md:my-20">
+      <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
+        <div className="text-center">
           <h4 className="font-medium text-[#398378] text-lg my-2">
             We're located at
           </h4>

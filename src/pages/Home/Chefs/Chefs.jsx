@@ -4,7 +4,7 @@ import ChefCards from './ChefCards/ChefCards';
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
   useEffect(() => {
-    fetch('../../../../public/chefs.json')
+    fetch('http://localhost:5000/')
       .then((res) => res.json())
       .then((data) => setChefs(data.chefs));
   }, []);

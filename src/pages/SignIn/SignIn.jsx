@@ -86,7 +86,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto py-3 md:py-10">
+    <div className="w-full md:w-3/4 mx-auto py-3 md:py-10">
       <h2 className="my-4 text-center text-[#398378] text-2xl">
         Please Sign In
       </h2>
@@ -124,7 +124,7 @@ const SignIn = () => {
           </button>
         </div>
       </form>
-      <div className="flex items-center gap-3 mx-auto w-1/2">
+      <div className="flex items-center gap-3 mx-auto w-full md:w-1/2">
         <h6 className="text-[#398378] text-base text-center">
           Or sign in with{' '}
         </h6>
@@ -143,7 +143,7 @@ const SignIn = () => {
           </button>
         </div>
       </div>
-      <div className="mx-auto w-1/2">
+      <div className="w-full mx-auto md:w-1/2">
         <h6 className="text-[#398378]  my-4 text-base">
           Don&apos;t have an account?{' '}
           <Link className="text-[#8ABE53]" to="/registration">
