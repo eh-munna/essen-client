@@ -18,7 +18,7 @@
     },
     {
       "id": 3,
-      "name": "Charlie Brown",
+      "name": "Catherine Lee",
       "picture": "https://img.freepik.com/fotos-kostenlos/kleinunternehmer-cafe-und-personalkonzept-huebscher-und-selbstbewusster-barista-show-off-cool-aussehend-und-auf-sich-selbst-zeigend-prahlende-kellnererfahrung-und-faehigkeit-weisser-hintergrund_1258-59192.jpg?size=626&ext=jpg",
       "years_experience": 12,
       "num_recipes": 200,
@@ -26,7 +26,7 @@
     },
     {
       "id": 4,
-      "name": "Diana Lee",
+      "name": "David Kim",
       "picture": "https://img.freepik.com/fotos-kostenlos/gluecklicher-jungekoch-im-einheitlichen-haltenen-salat_171337-5342.jpg?size=626&ext=jpg",
       "years_experience": 8,
       "num_recipes": 100,
@@ -34,7 +34,7 @@
     },
     {
       "id": 5,
-      "name": "Ethan Davis",
+      "name": "Sophie Müller",
       "picture": "https://img.freepik.com/fotos-kostenlos/portraet-eines-huebschen-maennlichen-chefs-kleidete-in-der-uniform-an_171337-5352.jpg?size=626&ext=jpg",
       "years_experience": 3,
       "num_recipes": 50,
@@ -42,7 +42,7 @@
     },
     {
       "id": 6,
-      "name": "Fiona Wang",
+      "name": "Johannes Schneider",
       "picture": "https://img.freepik.com/fotos-kostenlos/portraet-eines-gluecklichen-maennlichen-chefs-kleidete-in-der-uniform-an_171337-5354.jpg?size=626&ext=jpg",
       "years_experience": 6,
       "num_recipes": 80,

@@ -12,19 +12,19 @@ const Feedback = () => {
           <input
             type="text"
             placeholder="Your name"
-            class="focus:outline-none border border-[#8abe53] input  w-full"
+            className="focus:outline-none border border-[#8abe53] input  w-full"
           />
         </div>
         <div>
           <input
             type="type"
             placeholder="Your email"
-            class="focus:outline-none border border-[#8abe53] input  w-full"
+            className="focus:outline-none border border-[#8abe53] input  w-full"
           />
         </div>
         <div>
           <textarea
-            class="textarea-lg focus:outline-none textarea border-[#8abe53] w-full"
+            className="textarea-lg focus:outline-none textarea border-[#8abe53] w-full"
             placeholder="Your feedback"
           ></textarea>
         </div>
