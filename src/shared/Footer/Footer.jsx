@@ -11,21 +11,21 @@ const Footer = () => {
   return (
     <div className="my-4 md:my-20">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
-        <div className="text-center">
+        <div className="mt-4 md:mt-0 text-center">
           <h4 className="font-medium text-[#398378] text-lg my-2">
             We're located at
           </h4>
-          <ul className="">
+          <ul className="flex justify-center md:justify-normal md:flex-col gap-2 md:gap-0">
             <li className="text-[#8abe53] text-lg">Demostraße 23</li>
             <li className="text-[#8abe53] text-lg">12345 Berlin</li>
             <li className="text-[#8abe53] text-lg">Germany</li>
           </ul>
         </div>
-        <div>
+        <div className="mt-4 md:mt-0">
           <h4 className="font-medium text-[#398378] text-center my-2 text-lg">
             Follow Us
           </h4>
-          <ul className="flex gap-3 justify-center">
+          <ul className="flex gap-6 md:gap-3 justify-center">
             <li className="text-[#8abe53] text-xl">
               <Link>
                 <FaFacebookF />
@@ -48,17 +48,17 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div>
+        <div className="mt-4 md:mt-0">
           <h4 className="font-medium text-[#398378] text-center my-2 text-lg">
             Useful Links
           </h4>
-          <ul className="flex flex-col justify-center items-center gap-3">
+          <ul className="flex md:flex-col justify-center items-center gap-3">
             <li className="text-[#8abe53] text-base">
               <Link to="/">Home</Link>
             </li>
-            <li className="text-[#8abe53] text-base">
+            {/* <li className="text-[#8abe53] text-base">
               <Link to="/recipes">Recipes</Link>
-            </li>
+            </li> */}
             <li className="text-[#8abe53] text-base">
               <Link to="/sign-in">Sign In</Link>
             </li>

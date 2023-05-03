@@ -36,7 +36,7 @@ const ChefCards = ({ singleChef }) => {
               type="submit"
               className="border px-2 py-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
             >
-              <Link to={`/recepies/${id}`}>View Recipes</Link>
+              <Link to={`/recipes/${id}`}>View Recipes</Link>
             </button>
           </div>
         </div>
