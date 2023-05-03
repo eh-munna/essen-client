@@ -1,9 +1,11 @@
 import React from 'react';
+import { FaRegStar, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const RecipeCards = ({ recipe }) => {
-  const { ingredients, name, method } = recipe;
+  const { ingredients, name, method, rating } = recipe;
   console.log(recipe);
   return (
     <div className="bg-lime-50 shadow-xl rounded-md p-3">
@@ -18,7 +20,7 @@ const RecipeCards = ({ recipe }) => {
       </ul>
       <h5 className="my-2 font-medium">How to cook</h5>
       <p>{method}</p>
-      <div className="pt-6 rating">
+      <div className="py-6 flex justify-between items-center rating">
         <input
           onClick={(event) => {
             toast.success(`Recipe is bookmarked`, {
@@ -34,8 +36,17 @@ const RecipeCards = ({ recipe }) => {
           }}
           type="radio"
           name="rating-3"
-          className="disabled:opacity-30 disabled:cursor-default rating mask mask-heart bg-lime-400"
+          className=" disabled:bg-rose-400 disabled:cursor-default rating mask mask-heart bg-lime-700"
         />
+        <div>
+          <Rating
+            readonly
+            placeholderRating={rating}
+            emptySymbol={<FaRegStar className="text-lime-700"></FaRegStar>}
+            placeholderSymbol={<FaStar className="text-lime-700"></FaStar>}
+            fullSymbol={<FaStar></FaStar>}
+          />
+        </div>
       </div>
       <ToastContainer />
     </div>
