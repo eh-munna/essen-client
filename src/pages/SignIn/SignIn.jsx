@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 // toast
@@ -13,7 +13,16 @@ const gitHubProvider = new GithubAuthProvider();
 
 const SignIn = () => {
   const { userSignIn, googlePopUp, gitHubPopUp } = useContext(AuthContext);
-  console.log(googlePopUp);
+
+  // user navigation
+
+  const navigate = useNavigate();
+
+  // location
+
+  const location = useLocation();
+  const from = location.state?.from?.pathname || '/';
+
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
 
@@ -31,9 +40,7 @@ const SignIn = () => {
     userSignIn(email, password)
       .then((userCredential) => {
         const loggedUser = userCredential.user;
-        console.log(loggedUser);
         form.reset();
-
         // toast has added
         toast.success(`You're logged in`, {
           position: 'top-center',
@@ -45,6 +52,7 @@ const SignIn = () => {
           progress: undefined,
           theme: 'light',
         });
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -118,7 +126,7 @@ const SignIn = () => {
         <div className="my-4">
           <button
             type="submit"
-            className="border p-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
+            className="w-full md:w-auto border p-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
           >
             Sign In
           </button>

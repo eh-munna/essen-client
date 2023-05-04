@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 
 const Registration = () => {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
   const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const userRegistration = (event) => {
     event.preventDefault();
@@ -25,6 +26,7 @@ const Registration = () => {
         .then((result) => {
           const createdUser = result.user;
           form.reset();
+          navigate('/sign-in');
           setSuccess('User has been created successfully');
         })
         .catch((error) => {
@@ -88,7 +90,7 @@ const Registration = () => {
         <div className="my-4">
           <button
             type="submit"
-            className="border p-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
+            className="w-full md:w-auto border p-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
           >
             Sign Up
           </button>

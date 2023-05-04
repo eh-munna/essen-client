@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../public/logo-no-background.png';
 import { FaBars, FaWindowClose } from 'react-icons/fa';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Navbar = () => {
+  const { user, userLogOut } = useContext(AuthContext);
   const [toggle, setToggle] = useState(true);
-  console.log(toggle);
+  const navigate = useNavigate();
+
+  const userSignOut = () => {
+    userLogOut().then(() => {
+      navigate('/');
+    });
+  };
+
   return (
     <div>
       <div
@@ -55,20 +64,35 @@ const Navbar = () => {
               Blogs
             </Link>
           </li>
-          <li>
-            <Link to="/registration">
-              <button className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50">
-                Sign Up
-              </button>
-            </Link>
-          </li>
-          <li>
-            <Link to="/sign-in" className="">
-              <button className="border py-[1px] px-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
-                Sign In
-              </button>
-            </Link>
-          </li>
+          {user ? (
+            <li>
+              <Link to="/registration">
+                <button
+                  onClick={userSignOut}
+                  className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
+                >
+                  Log out
+                </button>
+              </Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="/registration">
+                  <button className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50">
+                    Sign Up
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/sign-in" className="">
+                  <button className="border py-[1px] px-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]">
+                    Sign In
+                  </button>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </div>
