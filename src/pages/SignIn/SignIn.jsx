@@ -72,7 +72,7 @@ const SignIn = () => {
     googlePopUp(googleProvider)
       .then((result) => {
         const loggedUser = result.user;
-        // console.log(loggedUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -85,7 +85,7 @@ const SignIn = () => {
     gitHubPopUp(gitHubProvider)
       .then((result) => {
         const loggedUser = result.user;
-        // console.log(loggedUser);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;

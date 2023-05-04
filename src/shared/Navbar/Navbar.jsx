@@ -1,14 +1,16 @@
 import React, { useContext, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import logo from '../../../public/logo-no-background.png';
-import { FaBars, FaWindowClose } from 'react-icons/fa';
+import { FaBars, FaUser, FaWindowClose } from 'react-icons/fa';
 import { AuthContext } from '../../providers/AuthProvider';
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
 
 const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   const [toggle, setToggle] = useState(true);
   const navigate = useNavigate();
-
+  console.log(user);
   const userSignOut = () => {
     userLogOut().then(() => {
       navigate('/');
@@ -18,10 +20,6 @@ const Navbar = () => {
   return (
     <div>
       <div
-        // onMouseOver={() => {
-        //   console.log('mouse enter');
-        //   setToggle(!toggle);
-        // }}
         onClick={() => {
           setToggle(!toggle);
         }}
@@ -49,32 +47,52 @@ const Navbar = () => {
           }
         >
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="text-base md:text-lg font-medium text-[#8abe53]"
+              className={({ isActive }) =>
+                isActive
+                  ? 'border border-lime-400 px-1 rounded-md text-base md:text-lg font-medium text-[#8abe53]'
+                  : 'text-base md:text-lg font-medium text-[#8abe53]'
+              }
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/blogs"
-              className="text-base md:text-lg font-medium text-[#8abe53]"
+              className={({ isActive }) =>
+                isActive
+                  ? 'border border-lime-400 px-1 rounded-md text-base md:text-lg font-medium text-[#8abe53]'
+                  : 'text-base md:text-lg font-medium text-[#8abe53]'
+              }
             >
               Blogs
-            </Link>
+            </NavLink>
           </li>
           {user ? (
-            <li>
-              <Link to="/registration">
-                <button
-                  onClick={userSignOut}
-                  className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
-                >
-                  Log out
-                </button>
-              </Link>
-            </li>
+            <>
+              <li>
+                <img
+                  src={user?.photoURL}
+                  className="w-6 h-6 rounded-full"
+                  alt=""
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content={user.displayName}
+                  data-tooltip-place="top"
+                />
+              </li>
+              <li>
+                <Link to="/registration">
+                  <button
+                    onClick={userSignOut}
+                    className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
+                  >
+                    Log out
+                  </button>
+                </Link>
+              </li>
+            </>
           ) : (
             <>
               <li>
@@ -95,6 +113,7 @@ const Navbar = () => {
           )}
         </ul>
       </nav>
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };

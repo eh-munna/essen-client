@@ -1,11 +1,12 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import { updateProfile } from 'firebase/auth';
 
 const Registration = () => {
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
-  const { createUser } = useContext(AuthContext);
+  const { createUser, userLogOut } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const userRegistration = (event) => {
@@ -25,7 +26,9 @@ const Registration = () => {
       createUser(email, password)
         .then((result) => {
           const createdUser = result.user;
+          userUpdating(createdUser, name, photo);
           form.reset();
+          userSignOut();
           navigate('/sign-in');
           setSuccess('User has been created successfully');
         })
@@ -37,6 +40,15 @@ const Registration = () => {
       setError('Cannot register without providing email and password');
       return;
     }
+    const userUpdating = (currentUser, name, photo_url) => {
+      updateProfile(currentUser, {
+        displayName: name,
+        photoURL: photo_url,
+      }).then(() => {});
+    };
+    const userSignOut = () => {
+      userLogOut().then(() => {});
+    };
   };
 
   return (
