@@ -24,9 +24,11 @@ const Recipes = () => {
           <img src={picture} className="max-w-full rounded-lg " />
           <div>
             <div className="p-6 space-y-2">
-              <h3 className="text-sky-900 text-4xl font-semibold">{name}</h3>
+              <h3 className="text-sky-900 text-3xl md:text-4xl font-semibold">
+                {name}
+              </h3>
               <h5 className="text-sky-950 font-medium py-3">{bio}</h5>
-              <h3 className="text-sky-500 text-lg font-medium">
+              <h3 className="text-sky-500 md:text-lg font-medium">
                 {name} has {years_experience} years of experience
               </h3>
               <div className=" flex justify-between items-center">
@@ -47,7 +49,7 @@ const Recipes = () => {
         </div>
       </div>
       <div>
-        <h2 className="my-8 md:my-20 text-center text-4xl text-[#398378] capitalize">
+        <h2 className="my-6 md:my-20 text-center text-2xl md:text-4xl text-[#398378] capitalize">
           Popular recipes
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

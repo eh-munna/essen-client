@@ -3,7 +3,7 @@ import React from 'react';
 const Feedback = () => {
   return (
     <div>
-      <h2 className="my-8 md:my-20 text-center text-4xl text-[#398378] capitalize">
+      <h2 className="my-6 md:my-20 text-center text-2xl md:text-4xl text-[#398378] capitalize">
         Give Us Your feedback
       </h2>
 

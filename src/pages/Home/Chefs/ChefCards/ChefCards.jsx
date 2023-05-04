@@ -9,13 +9,15 @@ const ChefCards = ({ singleChef }) => {
     <div>
       <div className="rounded-md border-rose-500 bg-lime-50 shadow-xl">
         <img
-          className="object-cover h-auto md:h-64 object-center  w-full rounded-md mx-auto"
+          className="max-w-full object-cover h-auto md:h-64 object-center  w-full rounded-md mx-auto"
           src={picture}
           alt=""
         />
         <div className="p-6 space-y-2">
-          <h3 className="text-sky-900 text-2xl font-semibold">{name}</h3>
-          <h3 className="text-sky-500 text-lg font-medium">
+          <h3 className="text-sky-900 text-xl md:text-2xl font-semibold">
+            {name}
+          </h3>
+          <h3 className="text-sky-500 text-base md:text-lg font-medium">
             {years_experience} years of experience
           </h3>
           <div className=" flex justify-between items-center">
@@ -34,7 +36,7 @@ const ChefCards = ({ singleChef }) => {
           <div className="pt-6">
             <button
               type="submit"
-              className="border px-2 py-1 border-[#8abe53] rounded-md text-[#fff] text-lg font-medium bg-[#8abe53]"
+              className="border px-2 py-1 border-[#8abe53] rounded-md text-[#fff] text-base md:text-lg font-medium bg-[#8abe53]"
             >
               <Link to={`/recipes/${id}`}>View Recipes</Link>
             </button>

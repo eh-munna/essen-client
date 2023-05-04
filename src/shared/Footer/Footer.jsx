@@ -16,9 +16,9 @@ const Footer = () => {
             We're located at
           </h4>
           <ul className="flex justify-center md:justify-normal md:flex-col gap-2 md:gap-0">
-            <li className="text-[#8abe53] text-lg">Demostraße 23</li>
-            <li className="text-[#8abe53] text-lg">12345 Berlin</li>
-            <li className="text-[#8abe53] text-lg">Germany</li>
+            <li className="text-[#8abe53] md:text-lg">Demostraße 23</li>
+            <li className="text-[#8abe53] md:text-lg">12345 Berlin</li>
+            <li className="text-[#8abe53] md:text-lg">Germany</li>
           </ul>
         </div>
         <div className="mt-4 md:mt-0">

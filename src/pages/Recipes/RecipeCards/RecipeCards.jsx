@@ -6,7 +6,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const RecipeCards = ({ recipe }) => {
   const { ingredients, name, method, rating } = recipe;
-  console.log(recipe);
   return (
     <div className="bg-lime-50 shadow-xl rounded-md p-3">
       <h4 className="py-6 text-sky-500 text-xl">{name}</h4>
