@@ -8,13 +8,7 @@ const PrivateRoute = ({ children }) => {
   const location = useLocation();
 
   if (isLoading) {
-    return (
-      <progress
-        className="w-full progress progress-success"
-        value="100"
-        max="100"
-      ></progress>
-    );
+    return <button className="mx-auto btn loading"></button>;
   }
 
   if (user) {
