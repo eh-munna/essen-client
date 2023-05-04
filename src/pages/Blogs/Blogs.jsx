@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import Pdf from 'react-to-pdf';
 
 const Blogs = () => {
+  const ref = useRef();
+  const options = {
+    orientation: 'landscape',
+    unit: 'in',
+  };
   return (
-    <div className="">
+    <div ref={ref} className="">
       <h2 className="my-6 md:my-20 text-center text-2xl md:text-4xl text-[#398378] capitalize">
         Some questions we have answered
       </h2>
@@ -97,6 +103,18 @@ const Blogs = () => {
             reusability, and help us maintain our code clean
           </p>
         </div>
+      </div>
+      <div className="text-center my-8">
+        <Pdf targetRef={ref} options={options} filename="blog.pdf">
+          {({ toPdf }) => (
+            <button
+              className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
+              onClick={toPdf}
+            >
+              Download Pdf
+            </button>
+          )}
+        </Pdf>
       </div>
     </div>
   );

@@ -10,7 +10,7 @@ const Navbar = () => {
   const { user, userLogOut } = useContext(AuthContext);
   const [toggle, setToggle] = useState(true);
   const navigate = useNavigate();
-  console.log(user);
+
   const userSignOut = () => {
     userLogOut().then(() => {
       navigate('/');
