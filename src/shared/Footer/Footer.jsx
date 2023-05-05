@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FaFacebookF,
@@ -6,8 +6,10 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from 'react-icons/fa';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Footer = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div className="my-4 md:my-20">
       <div className="grid grid-cols-1 md:grid-cols-3 items-center justify-center">
@@ -27,22 +29,22 @@ const Footer = () => {
           </h4>
           <ul className="flex gap-6 md:gap-3 justify-center">
             <li className="text-[#8abe53] text-xl">
-              <Link>
+              <Link to="/">
                 <FaFacebookF />
               </Link>
             </li>
             <li className="text-[#8abe53] text-xl">
-              <Link>
+              <Link to="/">
                 <FaInstagram />
               </Link>
             </li>
             <li className="text-[#8abe53] text-xl">
-              <Link>
+              <Link to="/">
                 <FaWhatsapp />
               </Link>
             </li>
             <li className="text-[#8abe53] text-xl">
-              <Link>
+              <Link to="/">
                 <FaTwitter />
               </Link>
             </li>
@@ -56,15 +58,19 @@ const Footer = () => {
             <li className="text-[#8abe53] text-base">
               <Link to="/">Home</Link>
             </li>
-            {/* <li className="text-[#8abe53] text-base">
-              <Link to="/recipes">Recipes</Link>
-            </li> */}
             <li className="text-[#8abe53] text-base">
-              <Link to="/sign-in">Sign In</Link>
+              <Link to="/blogs">Blogs</Link>
             </li>
-            <li className="text-[#8abe53] text-base">
-              <Link to="/registration">Sign Up</Link>
-            </li>
+            {!user && (
+              <>
+                <li className="text-[#8abe53] text-base">
+                  <Link to="/sign-in">Sign In</Link>
+                </li>
+                <li className="text-[#8abe53] text-base">
+                  <Link to="/registration">Sign Up</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </div>

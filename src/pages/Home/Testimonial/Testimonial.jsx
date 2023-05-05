@@ -7,7 +7,7 @@ const Testimonial = () => {
         Our clients say
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 relative">
-        <div className="shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
+        <div className="flex flex-col justify-between shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
           <h4 className="font-semibold">
             <span className="text-2xl text-green-600">"</span> I had the most
             amazing dining experience at Essen! The food was absolutely
@@ -16,14 +16,16 @@ const Testimonial = () => {
             restaurant to anyone looking for an unforgettable dining experience!{' '}
             <span className="text-2xl text-green-600">"</span>
           </h4>
-          <h5 className="text-sky-700 font-bold text-lg">
-            Michael,
-            <span className="mx-2 text-base font-medium text-blue-500">
-              Works at Zalando Deutschland
-            </span>
-          </h5>
+          <div className="flex justify-center">
+            <h5 className="text-sky-700 font-bold text-lg">
+              Michael,
+              <span className="mx-2 text-base font-medium text-blue-500">
+                Zalando Deutschland
+              </span>
+            </h5>
+          </div>
         </div>
-        <div className="shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
+        <div className="flex flex-col justify-between shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
           <h4 className="font-semibold">
             <span className="text-2xl text-green-600">"</span> If you're looking
             for authentic German cuisine, look no further than Essen! Every dish
@@ -33,14 +35,16 @@ const Testimonial = () => {
             come back! experience!{' '}
             <span className="text-2xl text-green-600">"</span>
           </h4>
-          <h5 className="text-sky-700 font-bold text-lg">
-            Zimmermaan,
-            <span className="mx-2 text-base font-medium text-blue-500">
-              Works at Wolt
-            </span>
-          </h5>
+          <div className="flex justify-center">
+            <h5 className="text-sky-700 font-bold text-lg">
+              Zimmermaan,
+              <span className="mx-2 text-base font-medium text-blue-500">
+                Wolt GmbH
+              </span>
+            </h5>
+          </div>
         </div>
-        <div className="shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
+        <div className="flex flex-col justify-between shadow-xl rounded-md p-3 bg-slate-100 space-y-6">
           <h4 className="font-semibold">
             <span className="text-2xl text-green-600">"</span> I had high
             expectations for Essen, and I'm pleased to say that they exceeded
@@ -52,12 +56,14 @@ const Testimonial = () => {
             special occasion or a memorable night out.{' '}
             <span className="text-2xl text-green-600">"</span>
           </h4>
-          <h5 className="text-sky-700 font-bold text-lg">
-            Caludia,
-            <span className="mx-2 text-base font-medium text-blue-500">
-              Works at Lieferando DE
-            </span>
-          </h5>
+          <div className="flex justify-center">
+            <h5 className="text-sky-700 font-bold text-lg">
+              Caludia,
+              <span className="mx-2 text-base font-medium text-blue-500">
+                Lieferando DE
+              </span>
+            </h5>
+          </div>
         </div>
       </div>
     </div>

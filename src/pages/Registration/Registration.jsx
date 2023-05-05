@@ -30,11 +30,13 @@ const Registration = () => {
           form.reset();
           userSignOut();
           navigate('/sign-in');
-          setSuccess('User has been created successfully');
         })
         .catch((error) => {
-          const errorMessage = error.message;
-          // setError(errorMessage);
+          const errorCode = error.code;
+          if (errorCode === 'auth/email-already-in-use') {
+            setError('Email already used');
+            return;
+          }
         });
     } else {
       setError('Cannot register without providing email and password');

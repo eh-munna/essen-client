@@ -83,14 +83,12 @@ const Navbar = () => {
                 />
               </li>
               <li>
-                <Link to="/registration">
-                  <button
-                    onClick={userSignOut}
-                    className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
-                  >
-                    Log out
-                  </button>
-                </Link>
+                <button
+                  onClick={userSignOut}
+                  className="border px-1 border-[#8abe53] rounded-md text-[#8abe53] text-lg font-medium bg-slate-50"
+                >
+                  Log out
+                </button>
               </li>
             </>
           ) : (
